@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>книги</title>
+  <link rel="icon" href="./img/иконка.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<section>
+  <form>
+    <label for="username">Логин:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button class="button-form" type="submit">Войти</button>
+  </form>
+</section>
+
+<body class="body">
+  <h1 class="title tracking-in-contract">~КНИГИ~</h1>
+  <div class="center-book">
+    <img src="./img/unnamed__3_-removebg-preview (1).png" alt="книги" width="600">
+
+  </div>
+
+  <main>
+    <button class="chat-button"></button>
+
+    <p class="welcome">Добро пожаловать в наш уютный книжный уголок! Здесь вы найдете сокровища литературного мира: от
+      классики до современных бестселлеров. Откройте для себя новые миры, погрузитесь в захватывающие истории и найдите
+      книгу, которая изменит вашу жизнь.</p>
+
+    <div class="btn-open-box"><button class="btn-open scale-up-center" data-modal-open>заказать книгу</button></div>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="btn button-odr" data-modal-close>Закрити</button>
+
+        <form><label>
+            Имя <br>
+            <input type="имя" name="имя" required />
+          </label> <br>
+          <label>
+            Фамилия <br>
+            <input type="фамилия" name="фамилия" required /> <br>
+          </label><label for="genre">Выберете книги: <br> </label>
+
+          <select id="genre" name="genre" required>
+            <option value="">-- Выберете книгу</option>
+            <option value="fiction">безсмертник</option>
+            <option value="non-fiction">идеаль</option>
+            <option value="fantasy">кровь на моих руках</option>
+            <option value="mystery">будь лучшей версией себя</option>
+            <option value="romance">не ной</option>
+            <option value="science">ни сы</option>
+            <option value="biography">не тупи</option>
+            <option value="children">низя</option>
+            <option value="other">люби</option>
+          </select> <br>
+          <label>
+            Укaжите количество книг? <br>
+            <input type="number" name="amount" required min="1" max="10" />
+          </label> <br>
+          <label>
+            Пожелания для заказа<br>
+            <textarea name="feedback" rows="5" placeholder="Напишите свой текст здесь..."></textarea>
+          </label>
+
+        </form>
+        <div class="divbutton-odr scale-up-center"><button class="button-odr " type="submit">заказать</button></div>
+        </form>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+
+        <div class="container_form">
+          <form>
+            <label for="genre">Выберете любимый жанр книги:</label><br><br>
+
+            <select id="genre" name="genre" required>
+              <option value="">-- Выберете жанр --</option>
+              <option value="fiction">Художественная литература</option>
+              <option value="non-fiction">Нехудожественная литература</option>
+              <option value="fantasy">Фентези</option>
+              <option value="mystery">Дэтэктив / Трилер</option>
+              <option value="romance">Романтика</option>
+              <option value="science">Наука та технология</option>
+              <option value="biography">Биография</option>
+              <option value="children">Детские книги</option>
+              <option value="other">Другое</option>
+            </select>
+          </form>
+        </div>
+        <br><br>
+        <section>
+          <h2 class="menu_title">~Меню~</h2>
+
+          <nav class="container">
+            <ul class="menu">
+              <li class="menu-item not-dot scale-up-center"><a class="menu-link" href="index.html">Дом</a></li>
+              <li class="menu-item scale-up-center"><a class="menu-link" href="shop.html">магазин</a></li>
+              <li class="menu-item scale-up-center"><a class="menu-link" href="music.html">музыка для чтения</a></li>
+              <li class="menu-item scale-up-center"><a class="menu-link" href="manhva.html">манги</a></li>
+              <li class="menu-item scale-up-center"><a class="menu-link" href="manhva online.html">Манги онлайн</a></li>
+              <li class="menu-item scale-up-center"><a class="menu-link" href="contact.html">Контакты</a></li>
+
+            </ul>
+          </nav>
+
+        </section>
+
+        <section>
+          <h2></h2>
+      </div>
+    </section>
+    <div class="container">
+
+      <ul class="book-list">
+        <li data-aos="fade-up"    data-aos-duration="3000" class="book-card">
+          <h3 class="book-name">Название книги: "Безсмертник"</h3>
+          <img class="book-img" src="https://fantasy-worlds.org/img/full/352/35269.jpg" alt="Безсмертник" width="200">
+          <section>
+            <a class="book-link scale-up-center" href="./img/безсмертник.jpg" download>
+              📥 Загрузить обложку книги
+            </a>
+          </section>
+          <p class="biography">Автор: Надя Сова</p>
+          <p class="biography">Жанр: Роман</p>
+          <p class="biography">Год издательства: 2023</p>
+          <p class="bezsmertnik">«Бессмертник» — это новый роман Нади Совы в жанре фольклорного фэнтези с элементами
+            детектива.
+            Главная героиня, студентка Нора, начинает видеть странные и пугающие вещи, включая чёрную тень и говорящего
+            кота.
+            Постепенно Нора понимает, что она — столетница, душа, прожившая сто лет в двух разных мирах.
+            Вместе с Брютом, заместителем начальника Стражи, Нора расследует загадочные убийства, угрожающие Ладному
+            миру.
+            Книга погружает читателя в атмосферу славянского фольклора, сочетая мистику и детективный сюжет.</p>
+          <a class="img-link scale-up-center"
+            href="https://magicbook.com.ua/ru/product-262479.html?srsltid=AfmBOorjfa_GUEqSbIYWK9mEcO32nw1aECuSNpG4jYuRhn0UQMw0QJuB"
+            target="_blank">купить книгу</a>
+        </li>
+        <li data-aos="fade-up"    data-aos-duration="3000"  data-aos="fade-up"    data-aos-duration="3000"class="book-card">
+          <h3 class="book-name">Название книги: "Идеаль"</h3>
+          <img class="book-img"
+            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1343461774i/12397745.jpg"
+            alt="Идеаль" width="200">
+          <a class="book-link scale-up-center" href="./img/идеаль1.jpg" download>
+            📥 Загрузить обложку книги
+          </a>
+          <p class="biography">Автор: Фредерик Бегбедер</p>
+          <p class="biography">Жанр: Фикшн</p>
+          <p class="biography">Год издательства: 2007</p>
+          <p>В романе Фредерика Бегбедера «Идеаль» главный герой, Октав Паранго, рекламщик, отправляется в
+            Россию на поиски «идеальной женщины» для рекламной кампании косметической фирмы. Он путешествует по разным
+            городам России, встречая множество красивых девушек, но ни одна из них не соответствует его представлениям
+            об
+            идеале. В процессе поисков Октав погружается в мир российской культуры и сталкивается с её противоречиями и
+            парадоксами. В конце концов, он находит девушку Лену, которая кажется ему идеальной, но их отношения
+            оказываются сложными и трагичными. Роман «Идеаль» — это сатирическое и провокационное произведение, в
+            котором
+            Бегбедер исследует темы красоты, любви, культуры и идентичности.
+          </p>
+          <a class="img-link scale-up-center"
+            href="https://booksit.com.ua/14794-ideal.htm?gad_source=1&gclid=Cj0KCQjw16O_BhDNARIsAC3i2GAfXHU7zxqkgH3zPFRZWrhtrLJH-cTBH_cbW8nP8vCPabMNuv4wkpwaAoayEALw_wcB"
+            target="_blank">купить книгу</a>
+        </li>
+        <li data-aos="fade-up"    data-aos-duration="3000" class="book-card">
+          <h3 class="book-name">Название книги: "Кровь на моих руках"</h3>
+          <img class="book-img" src="https://readli.net/wp-content/uploads/2016/08/BC2_1470668566.jpg"
+            alt="Кровь на моих руках" width="200">
+          <a class="book-link scale-up-center" href="./img/кровь на моих руках.jpg" download>
+            📥 Загрузить обложку книги </a>
+          <p class="biography">Автор: Лиза Керн</p>
+          <p class="biography">Жанр: Современный роман</p>
+          <p class="biography">Год издательства: 2016</p>
+          <p>В книге Лизы Керн «Кровь на моих руках» рассказывается о девушке-подростке Лиан, которая живет только ради
+            своего старшего брата Саймона. У нее нет друзей и родителей, и Саймон заменяет ей весь мир. Ее жизнь
+            переворачивается с ног на голову, когда она узнает, что Саймон — наркоман, готовый убить ее ради дозы. Роман
+            погружает читателя в мир подростковых переживаний, зависимости и борьбы за выживание. Лиан предстоит
+            столкнуться с предательством близкого человека и попытаться выжить в опасном мире, где брат может стать ее
+            врагом. Книга поднимает острые социальные проблемы и заставляет задуматься о ценности человеческой жизни и
+            силе духа.
+          </p>
+          <a class="img-link scale-up-center"
+            href="https://magicbook.com.ua/ru/product-595887.html?srsltid=AfmBOopR9L6tydxsUXMFnGj-1BPYdFyL7bOSd1DmjaYiCZzs-QKUZP-Z"
+            target="_blank">купить книгу</a>
+        </li>
+        <li data-aos="fade-up"    data-aos-duration="3000" class="book-card">
+          <h3 class="book-name">Название книги: Не ной</h3>
+          <img class="book-img" src="https://content2.rozetka.com.ua/goods/images/big/14401183.jpg" alt="не ной"
+            width="200">
+          <a class="book-link scale-up-center" href="./img/не ной.webp" download>
+            📥 Загрузить обложку книги</a>
+          <p class="biography">Автор: Джен Синсеро</p>
+          <p class="biography">Жанр: Self-help book</p>
+          <p class="biography">Год издательства: 2020</p>
+          <p>"Не ной" Джен Синсеро — это прямолинейное руководство по саморазвитию, которое призывает читателей
+            перестать
+            жаловаться и начать брать ответственность за свою жизнь. Автор подчеркивает, что наши мысли и убеждения
+            формируют нашу реальность, и призывает к позитивному мышлению и искоренению негативных установок. Книга
+            наполнена практическими советами и упражнениями, помогающими преодолеть страхи и сомнения, а также начать
+            действовать для достижения своих целей. Синсеро мотивирует читателей выйти из зоны комфорта и перестать быть
+            жертвами обстоятельств, напоминая, что каждый способен создать жизнь, о которой мечтает. Главный посыл книги
+            заключается в том, чтобы перестать ныть и начать предпринимать конкретные шаги для улучшения своей жизни.>
+          </p>
+          <a class="img-link scale-up-center" href="https://rozetka.com.ua/ua/255966691/p255966691/" target="_blank">купить книгу</a>
+        </li>
+        <li data-aos="fade-up"    data-aos-duration="3000" class="book-card">
+          <h3 class="book-name">Название книги: Не тупи</h3>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDltTSaGXmdv8n0fZGcdjqB7zOJmfjJmDkReBjL7kAA1zP84CBdg5wMbSA5t9MzmR2IR8&usqp=CAU"
+            width="200">
+          <a class="book-link scale-up-center" href="./img/не тупи.png" download>
+            📥 Загрузить обложку книги</a>
+          <p class="biography">Автор: Джен Синсеро</p>
+          <p class="biography">Жанр: Self-help book </p>
+          <P class="biography">Год издательство: 2022</P>
+          <p>"Не тупи" Джен Синсеро — это остроумное руководство по саморазвитию, которое призывает читателей перестать
+            саботировать собственный успех. Автор доходчиво объясняет, как наши ограничивающие убеждения и страхи мешают
+            нам
+            достигать желаемого. Книга предлагает практические инструменты и стратегии для изменения мышления,
+            преодоления
+            внутренних препятствий и выхода из зоны комфорта. Синсеро мотивирует читателей брать на себя ответственность
+            за
+            свою жизнь и перестать искать оправдания своим неудачам. Главный посыл книги заключается в том, чтобы
+            осознать
+            свои "затупы" и начать действовать более осознанно и эффективно для достижения своих целей.</p>
+          <a class="img-link scale-up-center" href="https://rozetka.com.ua/ua/290297413/p290297413/" target="_blank">купить книгу</a>
+        </li>
+        <li data-aos="fade-up"    data-aos-duration="3000" class="book-card">
+          <h3 class="book-name">Название книги: Низя</h3>
+          <img class="book-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYIbjch7ETWG-hAcy5FgqaimcqdIycHnUnTg&s"
+            alt="Низя" width="200">
+          <a class="book-link scale-up-center" href="./img/низя.jfif" download>
+            📥 Загрузить обложку книги</a>
+          <p class="biography">Авто: Джен Синсеро</p>
+          <P class="biography">Жанр: Self-help book</P>
+          <P class="biography">Год издательства: 2021</P>
+          <P>Книга рассказывает о том, как у нас формируются привычки, зачем они нужны и что вообще можно считать
+            "привычкой". Благодаря этой книге вы: - Получите безудержную мотивацию для достижения целей. - Сможете
+            избавиться от негативных установок и всего, что тянет вас на дно.</P>
+          <a class="img-link scale-up-center"
+            href="https://azon.market/ni-zja-otkazhis-ot-pagubnyh-privychek-obreti-silu-duha-i-sta-(id-2715370)"
+            target="_blank">купить книгу</a>
+        </li>
+        <li data-aos="fade-up"    data-aos-duration="3000" class="book-card">
+          <h3 class="book-name">Название книги: Люби себя</h3>
+          <img class="book-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmEqlxStssddFIcNqug2o8rfPN4T3b2dg20w&s"
+            alt="Люби себя" width="300">
+          <a class="book-link scale-up-center" href="./img/люби.jfif" download>
+            📥 Загрузить обложку книги</a>
+          <p class="biography">Автор: Камал Равикант</p>
+          <P class="biography">Жанр: Self-help book</P>
+          <P class="biography">Год издательства: 2021</P>
+          <p class="biography">Эта книга предлагает простую, но действенную практику самовнушения для безусловного
+            принятия себя. Автор
+            делится личным опытом борьбы с депрессией и рассказывает, как мантра "Я люблю себя" помогла ему изменить
+            свою
+            жизнь. Ключевая идея заключается в том, чтобы повторять эту фразу регулярно, пока она не укоренится в
+            подсознании. Равикант подчеркивает, что любовь к себе является фундаментом для счастья, успеха и здоровых
+            отношений. Книга вдохновляет читателей принять себя со всеми недостатками и начать относиться к себе с
+            добротой
+            и состраданием.</p>
+          <a class="img-link scale-up-center" href="https://knigavpodarok.com.ua/lyubi-sebya-slovno-ot-etogo-zavisit-tvoya-zhizn/"
+            target="_blank">купить книгу</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <section><iframe class="video" width="800" height="315"
+          src="https://www.youtube.com/embed/gZV4Mcy-Ai8?si=DjtRFQPne6ilavnw" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+    </div>
+    <div class="container">
+      <iframe class="maps"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162608.95960337957!2d30.375520179166315!3d50.445477871925604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfa17b775b1f%3A0x1c5a5d66e5ca471e!2zUmlkbWkgLSDQutC90LjQttC60L7QstC40Lkg0ZbQvdGC0LXRgNC90LXRgi3QvNCw0LPQsNC30LjQvQ!5e0!3m2!1sen!2sua!4v1744532867601!5m2!1sen!2sua"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="container">
+
+      <div class="form_site">
+        <section>
+          <h2 class="form-title">Ваш отзыв</h2>
+          <form>
+            <label class="label-text" for="message">Ваше сообщение:</label><br>
+            <textarea id="message" name="message" rows="6" cols="40" placeholder="Напишите нам..."></textarea><br><br>
+
+            <button class="button-form scale-up-center" type="submit">Отправить</button>
+          </form>
+        </section>
+        <section>
+          <h2 class="form-title">Вопрос-ответ</h2>
+          <details>
+            <summary class="form-summary">
+              Какая книга считается самой продаваемой в мире?</summary>
+            Библия – абсолютный рекордсмен по количеству проданных копий во всем мире.
+          </details>
+
+          <details>
+            <summary class="form-summary">Почему следует читать бумажные книги?</summary>
+            Паперові книги зменшують навантаження на очі, краще запам’ятовуються та дарують особливе тактильне відчуття
+            читання.
+          </details>
+
+          <details>
+            <summary class="form-summary">Какой жанр наиболее популярен среди подростков?</summary>
+            Чаще подростки читают фэнтези, приключения и молодежную драму.
+          </details>
+
+          <details>
+            <summary class="form-summary">Можно ли вернуть книгу, если она не понравилась?</summary>
+            Да, за умови збереження чеку та відсутності пошкоджень. Деталі уточнюйте в умовах повернення.
+          </details>
+
+          <details>
+            <summary class="form-summary">Продаются ли у вас книги украинских авторов?</summary>
+            Да! Мы поддерживаем украинских писателей и постоянно обновляем ассортимент современной украинской
+            литературы.
+          </details>
+        </section>
+        <section>
+          <h2 class="form-title">Выберете дату заказа</h2>
+
+          <form>
+            <label class="label-text" for="delivery-date">Об:</label><br>
+            <input type="date" id="delivery-date" name="delivery-date" required><br><br>
+
+            <button class="button-form scale-up-center" type="submit">Подтвердить доставку </button>
+          </form>
+
+        </section>
+        <section>
+          <h2 class="form-title">Консультация</h2>
+          <form>
+            <label class="label-text" for="name">Ваше имя:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label class="label-text" for="phone">Номер телефону:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="+380..." required><br><br>
+            <button class="button-form scale-up-center" type="submit">Записаться</button>
+          </form>
+
+
+        </section>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-text">
+          Этот сайт разработала Ксения Дементий
+        </p>
+      </div>
+    </footer>
+    <script src="modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
+</body>
+
+</html>      data-aos-duration="3000">    data-aos-duration="3000"
