@@ -592,4 +592,28 @@ border: none;
     transform: translateX(-8px);
   }
 }
+@media (max-width: 450px) {
+  body {
+    background-color: #4caf50;
+  }
+  .title{
+    font-size: 28px;
+    margin-left: -78px;
+  }
+  .mobile-home{
+    width: 300px
+  }
+  .welcome {
+    width: 284px;
+    margin: 0 auto;
+    text-align: center;
+  margin-left: 3px; 
+
+  }
+  .menu_title {
+    text-align: center;
+    margin-left: -892px;
+}
+} 
+
 
