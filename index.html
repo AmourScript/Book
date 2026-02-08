@@ -40,14 +40,22 @@
       <div class="modal">
         <button class="btn button-odr" data-modal-close>Закрити</button>
 
-        <form><label>
+        <form  action="https://formspree.io/f/xkovnlqp"
+  method="POST"><label>
             Имя <br>
-            <input type="имя" name="имя" required />
+            <input placeholder="имя..." type="text" name="имя" required />
           </label> <br>
           <label>
             Фамилия <br>
-            <input type="фамилия" name="фамилия" required /> <br>
-          </label><label for="genre">Выберете книги: <br> </label>
+            <input placeholder="фамилия..." type="text" name="фамилия" required /> <br>
+            
+          </label> 
+          <label>
+            Номер телефона <br>
+            <input placeholder="+380(хх)ххх-ххх" type="text" name="фамилия" required /> <br>
+            
+          </label> 
+          <label for="genre">Выберете книги: <br> </label>
 
           <select id="genre" name="genre" required>
             <option value="">-- Выберете книгу</option>
@@ -63,8 +71,28 @@
           </select> <br>
           <label>
             Укaжите количество книг? <br>
-            <input type="number" name="amount" required min="1" max="10" />
+            <input placeholder="1,2,3...." type="number" name="amount" required min="1" max="10" />
           </label> <br>
+          <label>
+            Населеный пункт <br>
+            <input placeholder="город..." type="text" name="фамилия" required /> <br>
+            
+          </label> 
+          
+          <label>
+            Отделение почты <br>
+            <input  placeholder="Номер отделене..." type="text" name="фамилия" required /> <br>
+            
+          </label> 
+          <label>
+                <input type="radio" name="book-genre" value="fiction" required>
+              новая почта
+              </label><br>
+
+              <label>
+                <input type="radio" name="book-genre" value="fantasy">
+                укр почта
+              </label><br>
           <label>
             Пожелания для заказа<br>
             <textarea name="feedback" rows="5" placeholder="Напишите свой текст здесь..."></textarea>
