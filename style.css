@@ -51,13 +51,13 @@ color: #100379;
 
 .menu-link {
   text-decoration: none;
-  background-color: rgb(213, 174, 250);
+  background-color: rgb(187, 171, 151);
   padding: 10px;
   border-radius: 10px;
 }
 
 .menu-link:hover {
-  background-color: rgb(255, 164, 229);
+  background-color:  rgb(128, 118, 105);
 }
 
 .menu-item {
@@ -72,15 +72,136 @@ color: #100379;
   margin: 0 auto;
   padding: 20px;
 }
-
-.book-card {
-  width: 300px;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: rgb(244, 209, 249);
-
+ .book-image-large{
+  height: 400px;
+    width: 700px;
+ }
+/* Контейнер для всех книг */
+.books-container {
+    text-align: center; /* Центрируем книги на странице */
+    padding: 20px;
+    display: block; /* Сбрасываем все сетки */
 }
 
+/* Сама карточка - делаем её маленькой */
+.book-card {
+    display: inline-block; /* Самое важное: заставляет блоки встать в ряд */
+    vertical-align: top;   /* Чтобы они не прыгали по высоте */
+    width: 200px;          /* Ширина как на том сайте */
+    margin: 15px;          /* Расстояние между книгами */
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;      /* Текст внутри книги - по левому краю */
+    
+}
+
+/* Картинка внутри карточки */
+.book-card img {
+    width: 100%;           /* Растягиваем на всю ширину карточки */
+    height: 250px;         /* Фиксируем высоту обложки */
+    object-fit: cover;     /* Чтобы не искажалась */
+    border-radius: 4px;
+}
+
+.book-img {
+    height: 250px;       /* Заставляем все картинки быть одной высоты */
+    width: 100%;         /* Растягиваем по ширине карточки */
+    object-fit: contain; /* МАГИЯ: картинка подстроится под размер, не растягиваясь и не обрезаясь */
+}
+
+/* Названия книг */
+.book-title {
+    font-size: 14px;
+    font-family: Arial, sans-serif; /* Убираем рукописный шрифт для читаемости */
+    margin: 10px 0 5px;
+    height: 35px;          /* Ограничиваем высоту текста */
+    overflow: hidden;      /* Прячем лишний текст */
+}
+
+/* Обложка */
+.book-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 4px; /* Чуть скруглим углы обложки */
+}
+
+/* Заголовок книги */
+.book-title {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    margin: 15px 0 5px;
+}
+
+/* Цена */
+.book-price {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #100379; /* Твой синий цвет */
+    margin-bottom: 15px;
+}
+
+/* Кнопка */
+.book-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #100379;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px; /* Округлая кнопка */
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.book-button:hover {
+    background-color: #f06292; /* Розовый акцент при наведении */
+}
+
+ /* Добавить в самый конец style.css */
+.product-gallery {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.thumbnails img {
+    width: 50px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+.main-window {
+    position: relative;
+    width: 300px; /* подбери под размер своей картинки */
+}
+.main-slide {
+    display: none;
+    width: 100%;
+}
+.main-slide.active {
+    display: block;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #100379;
+    z-index: 5;
+}
+.prev { left: -25px; }
+.next { right: -25px; }
 .book-list {
   display: flex;
   flex-wrap: wrap;
@@ -111,9 +232,57 @@ color: #100379;
   display: block;
   margin: 0 auto;
   border-radius: 20px;
-  box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.3);
+  
 
 }
+
+/* Контейнер для всех книг (строит их в ряд) */
+.book-list {
+    display: flex;
+    flex-wrap: wrap; /* Чтобы книги переносились на новую строку */
+    justify-content: center; /* Центрируем их */
+    gap: 30px; /* Расстояние между книгами */
+    padding: 20px;
+    list-style: none;
+}
+
+/* Сама карточка книги */
+.book-card {
+    width: 220px;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s; /* Чтобы плавно оживала при наведении */
+}
+
+/* Эффект "Вау" при наведении */
+.book-card:hover {
+    transform: translateY(-8px); /* Книжка слегка подпрыгивает */
+    border-color: #e2d9c8; /* Цвет под твое меню */
+}
+
+/* Сама обложка */
+.book-img {
+    width: 100%;
+    height: 250px; /* Фиксируем высоту обложек */
+    object-fit: contain; /* Чтобы картинка не сжималась */
+    margin-bottom: 15px;
+}
+
+/* Кнопка "докладніше" */
+.img-link {
+    display: inline-block;
+    background-color: #5d3fd3; /* Твой сиреневый */
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
 
 .footer {
   background-color: rgb(213, 240, 252);
@@ -145,18 +314,19 @@ color: #100379;
 }
 
 .img-link {
-  background-color: #bdfbf5;
+  background-color: #e6e3df;
   padding: 5px;
   border-radius: 8px;
   margin: 20px auto;
   display: block;
   text-align: center;
   text-decoration: none;
-  color: rgb(213, 0, 241);
+  color: black;
+  border: 1px solid black
 }
 
 .img-link:hover {
-  background-color: rgb(150, 168, 255);
+  background-color: #dfd7cc;
 }
 
 .button-form {
@@ -187,7 +357,7 @@ color: #100379;
 }
 
 .body {
-  background-color: #fff;
+  background-color: #fffbf7;
 }
 
 .music_item {
@@ -428,43 +598,7 @@ img {
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.box:nth-child(1) {
-  top: -350px;
-  left: 100px;
-  background-image: url("./img/manhva/images.jfif");
-  background-size: contain;
-  z-index: 2;
-  transform: rotate(5deg);
-}
 
-.box:nth-child(2) {
-  top: -320px;
-  left: 250px;
-  background-image: url("./img/Felix.jfif");
-  background-size: 120px;
-  z-index: 2;
-  background-repeat: no-repeat;
-  width: 120px;
-  transform: rotate(5deg);
-}
-
-.box:nth-child(3) {
-  top: -200px;
-  left: 250px;
-  background-image: url("./img/Егор\ Крид.jfif");
-  background-size: contain;
-  z-index: 1;
-  background-repeat: no-repeat;
-  transform: rotate(5deg);
-}
-
-.box:nth-child(4) {
-  top: -198px;
-  left: 100px;
-  background-image: url("./img/Валя\ Карнавал.jfif");
-  background-size: contain;
-  transform: rotate(5deg);
-}
 
 .backdrop {
   position: fixed;
@@ -495,7 +629,7 @@ img {
   min-width: 400px;
   min-height: 300px;
   padding: 15px;
-  background-color: rgb(135, 235, 225);
+  background-color: rgb(255, 246, 227);
   transform: translate(-50%, -50%);
   border-radius: 5px;
 
@@ -519,9 +653,10 @@ font-size: large;
 .button-odr{
   padding: 10px 20px;
 margin-top: 20px;
-border-radius: 10px;
-background-color: #febee8;
-border: none;
+border-radius: 5px;
+background-color: #e6e3df;
+cursor: pointer;
+;
 }
 .divbutton-odr{
   width: 100px;
@@ -621,4 +756,106 @@ border: none;
 }
 } 
 
+.backdrop.is-hidden {
+    display: none; /* Это полностью прячет окно */
+}
 
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Темный фон вокруг окна */
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.product-slider {
+  display: flex;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  height:400px;
+}
+
+/* Колонка з мініатюрами */
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumb {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.thumb:hover {
+  opacity: 1;
+}
+
+.thumb.active {
+  border-color: var(--primary-color);
+  opacity: 1;
+}
+
+/* Головне зображення */
+.main-view {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.main-view img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  transition: opacity 0.3s ease-in-out;
+  
+}
+.main-header {
+    position: fixed;      /* Фиксируем на экране */
+    top: 0;               /* Прижимаем к самому верху */
+    left: 0;
+    width: 100%;          /* Растягиваем на всю ширину */
+    background: #E2D9C8;  /* Цвет фона прямоугольника */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); /* Легкая тень снизу */
+    z-index: 1000;        /* Чтобы меню всегда было поверх картинок */
+    padding: 10px 0;      /* Отступы внутри прямоугольника */
+}
+
+/* Центрируем список внутри шапки */
+.main-header .menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+/* Чтобы контент сайта не заезжал ПОД меню, добавим отступ всему телу сайта */
+body {
+    padding-top: 70px; /* Высота должна быть чуть больше высоты меню */
+}

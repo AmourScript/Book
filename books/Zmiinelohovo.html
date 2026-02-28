@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Зміїне лігво - К.А. Найт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .book-page {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .book-image-large {
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-info-large {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #888;
+            font-family: 'Lora', serif;
+        }
+
+        .description-block {
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: #100379;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="book-page">
+        <a href="../index.html" class="back-link">← Повернутись до каталогу</a>
+
+        <div style="display: flex; gap: 40px; width: 100%;">
+            <!-- <img src="../img/a45567cf-0011-11f0-81bb-005056857596_4c70a77d-41ec-11f0-81bd-005056b0789c.webp"
+                alt="Бессмертник" class="book-image-large">  -->
+                <div class="product-slider">
+  <div class="thumbnails">
+    <img src="../img/Zmiine lihvo2.webp" class="thumb active" onclick="changeImage(this, '')" alt="Товар 1">
+    <img src="../img/Zmiine lihvo.webp" class="thumb" onclick="changeImage(this, 'https://picsum.photos/id/21/600/600')" alt="Товар 2">
+    <img src="../img/Zmiine lihvo2.webp" class="thumb" onclick="changeImage(this, 'https://picsum.photos/id/22/600/600')" alt="Товар 3">
+  </div>
+
+  <div class="main-view">
+    <img id="main-img" src="../img/Zmiine lihvo.webp" alt="Основне фото товару">
+  </div>
+</div>
+
+            <div class="book-info-large">
+                <h1 class="title" style="text-align: left; margin: 0;"></h1>
+                <p class="book-price" style="font-size: 28px; margin: 20px 0;">750 ₽</p>
+                <button class="button-odr" id="openModal" style="padding: 15px 40px; font-size: 18px;">Замовити КНИГУ</button>
+<div id="myModal" class="backdrop is-hidden">
+    <div class="modal">
+        <button id="closeModal" class="btn button-odr" type="button" style="float: right; margin-bottom: 10px;">Закрыть</button>
+
+        <form action="https://formspree.io/f/xkovnlqp" method="POST">
+            <input type="hidden" name="Книга" value="Зміїне лігво">
+
+            <h2 style="font-family: 'Lora', serif;">Оформление заказа</h2>
+            
+            <label>Имя <br> <input type="text" name="name" required /></label><br>
+             <label>Призвище <br> <input type="text" name="name" required /></label><br>
+             <label for="genre">книга: <br> </label>
+
+          <select id="genre" name="book" required>
+            <option value="Зміїне лігво">Зміїне лігво</option>
+           
+         
+          </select> <br>
+            <label>Телефон <br> <input type="text" name="tel" placeholder="+380..." required /></label><br>
+            <label>Город <br> <input type="text" name="city" required /></label><br>
+            <label>Почта (номер/поштомат) <br> <input type="text" name="post_office" required /></label><br>
+            
+            <label>Доставка: <br>
+                <input type="radio" name="delivery" value="NovaPost" checked> Новая почта
+                <input type="radio" name="delivery" value="UkrPost"> Укр почта
+            </label><br>
+
+            <div class="divbutton-odr scale-up-center">
+                <button class="button-odr" type="submit">ОТПРАВИТЬ</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Логика открытия/закрытия
+    const modal = document.getElementById("myModal");
+    const btnOpen = document.getElementById("openModal");
+    const btnClose = document.getElementById("closeModal");
+
+    btnOpen.onclick = () => modal.classList.remove("is-hidden");
+    btnClose.onclick = () => modal.classList.add("is-hidden");
+
+    // Закрыть при клике на темный фон
+    window.onclick = (event) => {
+        if (event.target == modal) modal.classList.add("is-hidden");
+    }
+</script>
+
+
+                <div style="margin-top: 30px; color: #555;">
+                    <div style="margin-top: 30px; color: #555; line-height: 1.6;">
+                        <p><strong>Автор:</strong> К.А. Найт</p>
+                        <p><strong>Видавництво:</strong> Book Chef</p>
+                        <p><strong>Перекладач:</strong> Інна Ляхімець</p>
+                        <p><strong>Рік видання:</strong> 2025</p>
+                        <p><strong>Мова:</strong> Українська</p>
+                        <p><strong>Кількість сторінок:</strong> 752</p>
+                        <p><strong>Обкладинка:</strong> Тверда</p>
+                        <p><strong>Вага:</strong> 0.633 кг</p>
+                        <p><strong>ISBN:</strong> 9786175483985</p>
+                        <p><strong>Формат:</strong> 135x205x45 мм</p>
+                        <p><strong>Тип:</strong> Паперова книга</p>
+                    </div>
+                    </div>
+                    <div class="description-block" style="clear: both; padding-top: 40px;"></div>
+                </div>
+            </div>
+
+            <div class="description-block">
+                <h2 class="section-title">О ЧЕМ ЭТА ИСТОРИЯ?</h2>
+                <p class="welcome" style="text-align: left; width: 100%;">
+                    Вони керують цим містом і всіма в ньому. Їхні угоди такі ж мерзенні, як і бізнес, а їхньої репутації
+                    достатньо, щоб поставити дорослого чоловіка на коліна, змусивши його благати про пощаду. Вони не ті
+                    люди, з якими ти матимеш справи, але мій тато мав. Старий заборгував їм, а потім продав мене, щоб
+                    покрити свої збитки. Так, продав мене. Тепер вони володіють мною. Я їхня у всіх сенсах цього слова.
+                    Але
+                    я ніколи не була лагідною й поступливою. Ці чоловіки дивляться на мене з тугою. Їхні пошрамовані,
+                    закривавлені руки міцно тримають мене. Вони хочуть усю мене, усе, що я можу їм дати, і не
+                    зупиняться,
+                    доки не отримають саме це. Вони можуть володіти моїм тілом, але їм ніколи не здобути мого серця.
+                    Гадюки?
+                    Я збираюся змусити їх пошкодувати про той день, коли вони мене забрали. Ця дівчина? Вона теж
+                    кусається.
+
+                </p>
+            </div>
+        </div>
+ <script src="../modal.js"></script>
+</body>
+
+</html>
