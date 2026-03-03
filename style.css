@@ -4,11 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=WDXL+Lubrifont+TC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 .title {
-color: #100379;
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Lora', serif !important; /* Добавь именно так с !important */
+  color: #100379;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Lora', serif !important;
+  /* Добавь именно так с !important */
 }
 
 .center-book {
@@ -21,9 +23,10 @@ color: #100379;
   margin: 0 auto;
   text-align: center;
   font-family: 'Lora', serif;
-    font-size: 18px;
-    line-height: 1.6; /* чтобы строчки не слипались */
-    color: #444;
+  font-size: 18px;
+  line-height: 1.6;
+  /* чтобы строчки не слипались */
+  color: #444;
 }
 
 .bezsmertnik {
@@ -57,7 +60,7 @@ color: #100379;
 }
 
 .menu-link:hover {
-  background-color:  rgb(128, 118, 105);
+  background-color: rgb(128, 118, 105);
 }
 
 .menu-item {
@@ -72,136 +75,172 @@ color: #100379;
   margin: 0 auto;
   padding: 20px;
 }
- .book-image-large{
+
+.book-image-large {
   height: 400px;
-    width: 700px;
- }
+  width: 700px;
+}
+
 /* Контейнер для всех книг */
 .books-container {
-    text-align: center; /* Центрируем книги на странице */
-    padding: 20px;
-    display: block; /* Сбрасываем все сетки */
+  text-align: center;
+  /* Центрируем книги на странице */
+  padding: 20px;
+  display: block;
+  /* Сбрасываем все сетки */
 }
 
 /* Сама карточка - делаем её маленькой */
 .book-card {
-    display: inline-block; /* Самое важное: заставляет блоки встать в ряд */
-    vertical-align: top;   /* Чтобы они не прыгали по высоте */
-    width: 200px;          /* Ширина как на том сайте */
-    margin: 15px;          /* Расстояние между книгами */
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: left;      /* Текст внутри книги - по левому краю */
-    
+  display: inline-block;
+  /* Самое важное: заставляет блоки встать в ряд */
+  vertical-align: top;
+  /* Чтобы они не прыгали по высоте */
+  width: 200px;
+  /* Ширина как на том сайте */
+  margin: 15px;
+  /* Расстояние между книгами */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  /* Текст внутри книги - по левому краю */
+
 }
 
 /* Картинка внутри карточки */
 .book-card img {
-    width: 100%;           /* Растягиваем на всю ширину карточки */
-    height: 250px;         /* Фиксируем высоту обложки */
-    object-fit: cover;     /* Чтобы не искажалась */
-    border-radius: 4px;
+  width: 100%;
+  /* Растягиваем на всю ширину карточки */
+  height: 250px;
+  /* Фиксируем высоту обложки */
+  object-fit: cover;
+  /* Чтобы не искажалась */
+  border-radius: 4px;
 }
 
 .book-img {
-    height: 250px;       /* Заставляем все картинки быть одной высоты */
-    width: 100%;         /* Растягиваем по ширине карточки */
-    object-fit: contain; /* МАГИЯ: картинка подстроится под размер, не растягиваясь и не обрезаясь */
+  height: 250px;
+  /* Заставляем все картинки быть одной высоты */
+  width: 100%;
+  /* Растягиваем по ширине карточки */
+  object-fit: contain;
+  /* МАГИЯ: картинка подстроится под размер, не растягиваясь и не обрезаясь */
 }
 
 /* Названия книг */
 .book-title {
-    font-size: 14px;
-    font-family: Arial, sans-serif; /* Убираем рукописный шрифт для читаемости */
-    margin: 10px 0 5px;
-    height: 35px;          /* Ограничиваем высоту текста */
-    overflow: hidden;      /* Прячем лишний текст */
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  /* Убираем рукописный шрифт для читаемости */
+  margin: 10px 0 5px;
+  height: 35px;
+  /* Ограничиваем высоту текста */
+  overflow: hidden;
+  /* Прячем лишний текст */
 }
 
 /* Обложка */
 .book-cover {
-    width: 100%;
-    height: auto;
-    border-radius: 4px; /* Чуть скруглим углы обложки */
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  /* Чуть скруглим углы обложки */
 }
 
 /* Заголовок книги */
 .book-title {
-    font-family: 'Lora', serif;
-    font-size: 20px;
-    margin: 15px 0 5px;
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  margin: 15px 0 5px;
 }
 
 /* Цена */
 .book-price {
-    font-family: 'Lora', serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #100379; /* Твой синий цвет */
-    margin-bottom: 15px;
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #100379;
+  /* Твой синий цвет */
+  margin-bottom: 15px;
 }
 
 /* Кнопка */
 .book-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #100379;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px; /* Округлая кнопка */
-    font-size: 14px;
-    transition: 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #100379;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  /* Округлая кнопка */
+  font-size: 14px;
+  transition: 0.3s;
 }
 
 .book-button:hover {
-    background-color: #f06292; /* Розовый акцент при наведении */
+  background-color: #f06292;
+  /* Розовый акцент при наведении */
 }
 
- /* Добавить в самый конец style.css */
+/* Добавить в самый конец style.css */
 .product-gallery {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
 }
+
 .thumbnails {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
+
 .thumbnails img {
-    width: 50px;
-    height: 70px;
-    object-fit: cover;
-    cursor: pointer;
-    border: 1px solid #ddd;
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ddd;
 }
+
 .main-window {
-    position: relative;
-    width: 300px; /* подбери под размер своей картинки */
+  position: relative;
+  width: 300px;
+  /* подбери под размер своей картинки */
 }
+
 .main-slide {
-    display: none;
-    width: 100%;
+  display: none;
+  width: 100%;
 }
+
 .main-slide.active {
-    display: block;
+  display: block;
 }
+
 .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #100379;
-    z-index: 5;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #100379;
+  z-index: 5;
 }
-.prev { left: -25px; }
-.next { right: -25px; }
+
+.prev {
+  left: -25px;
+}
+
+.next {
+  right: -25px;
+}
+
 .book-list {
   display: flex;
   flex-wrap: wrap;
@@ -232,55 +271,64 @@ color: #100379;
   display: block;
   margin: 0 auto;
   border-radius: 20px;
-  
+
 
 }
 
 /* Контейнер для всех книг (строит их в ряд) */
 .book-list {
-    display: flex;
-    flex-wrap: wrap; /* Чтобы книги переносились на новую строку */
-    justify-content: center; /* Центрируем их */
-    gap: 30px; /* Расстояние между книгами */
-    padding: 20px;
-    list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  /* Чтобы книги переносились на новую строку */
+  justify-content: center;
+  /* Центрируем их */
+  gap: 30px;
+  /* Расстояние между книгами */
+  padding: 20px;
+  list-style: none;
 }
 
 /* Сама карточка книги */
 .book-card {
-    width: 220px;
-    background: #ffffff;
-    border: 1px solid #f0f0f0;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    transition: 0.3s; /* Чтобы плавно оживала при наведении */
+  width: 220px;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+  /* Чтобы плавно оживала при наведении */
 }
 
 /* Эффект "Вау" при наведении */
 .book-card:hover {
-    transform: translateY(-8px); /* Книжка слегка подпрыгивает */
-    border-color: #e2d9c8; /* Цвет под твое меню */
+  transform: translateY(-8px);
+  /* Книжка слегка подпрыгивает */
+  border-color: #e2d9c8;
+  /* Цвет под твое меню */
 }
 
 /* Сама обложка */
 .book-img {
-    width: 100%;
-    height: 250px; /* Фиксируем высоту обложек */
-    object-fit: contain; /* Чтобы картинка не сжималась */
-    margin-bottom: 15px;
+  width: 100%;
+  height: 250px;
+  /* Фиксируем высоту обложек */
+  object-fit: contain;
+  /* Чтобы картинка не сжималась */
+  margin-bottom: 15px;
 }
 
 /* Кнопка "докладніше" */
 .img-link {
-    display: inline-block;
-    background-color: #5d3fd3; /* Твой сиреневый */
-    color: white;
-    text-decoration: none;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 14px;
-    margin-top: 10px;
+  display: inline-block;
+  background-color: #5d3fd3;
+  /* Твой сиреневый */
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 
@@ -634,31 +682,37 @@ img {
   border-radius: 5px;
 
 }
-.btn-open-box{
+
+.btn-open-box {
   text-align: center;
-  
+
 }
-.btn-open{
+
+.btn-open {
   padding: 10px 20px;
-margin-top: 20px;
-background-color: #b1a1f1;
-border-radius: 10px;
-border: none;
-font-size: large;
+  margin-top: 20px;
+  background-color: #b1a1f1;
+  border-radius: 10px;
+  border: none;
+  font-size: large;
 }
-.btn-open:hover{
-  background-color:  #7484ff;
- cursor: pointer;;
+
+.btn-open:hover {
+  background-color: #7484ff;
+  cursor: pointer;
+  ;
 }
-.button-odr{
+
+.button-odr {
   padding: 10px 20px;
-margin-top: 20px;
-border-radius: 5px;
-background-color: #e6e3df;
-cursor: pointer;
-;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #e6e3df;
+  cursor: pointer;
+  ;
 }
-.divbutton-odr{
+
+.divbutton-odr {
   width: 100px;
   margin: 0 auto;
   border: none;
@@ -667,7 +721,7 @@ cursor: pointer;
 
 
 .tracking-in-contract {
-	animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 @keyframes tracking-in-contract {
@@ -675,28 +729,35 @@ cursor: pointer;
     letter-spacing: 1em;
     opacity: 0;
   }
+
   40% {
     opacity: 0.6;
   }
+
   100% {
     letter-spacing: normal;
     opacity: 1;
   }
 }
+
 .scale-up-center:hover {
-	animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
 @keyframes scale-up-center {
   0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(1.1);
   }
 }
+
 .shake-horizontal {
-	animation: shake-horizontal 15s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+  animation: shake-horizontal 15s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
 }
+
 /* ----------------------------------------------
  * Generated by Animista on 2025-12-27 11:47:55
  * Licensed under FreeBSD License.
@@ -710,75 +771,87 @@ cursor: pointer;
  * ----------------------------------------
  */
 @keyframes shake-horizontal {
+
   0%,
   100% {
     transform: translateX(0);
   }
+
   10%,
   30%,
   50%,
   70% {
     transform: translateX(-10px);
   }
+
   20%,
   40%,
   60% {
     transform: translateX(10px);
   }
+
   80% {
     transform: translateX(8px);
   }
+
   90% {
     transform: translateX(-8px);
   }
 }
+
 @media (max-width: 450px) {
   body {
     background-color: #4caf50;
   }
-  .title{
+
+  .title {
     font-size: 28px;
     margin-left: -78px;
   }
-  .mobile-home{
+
+  .mobile-home {
     width: 300px
   }
+
   .welcome {
     width: 284px;
     margin: 0 auto;
     text-align: center;
-  margin-left: 3px; 
+    margin-left: 3px;
 
   }
+
   .menu_title {
     text-align: center;
     margin-left: -892px;
+  }
 }
-} 
 
 .backdrop.is-hidden {
-    display: none; /* Это полностью прячет окно */
+  display: none;
+  /* Это полностью прячет окно */
 }
 
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Темный фон вокруг окна */
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  /* Темный фон вокруг окна */
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
 }
 
 .product-slider {
@@ -787,8 +860,8 @@ cursor: pointer;
   background: white;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  height:400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  height: 400px;
 }
 
 /* Колонка з мініатюрами */
@@ -832,30 +905,69 @@ cursor: pointer;
   height: 300px;
   object-fit: contain;
   transition: opacity 0.3s ease-in-out;
-  
+
 }
+
 .main-header {
-    position: fixed;      /* Фиксируем на экране */
-    top: 0;               /* Прижимаем к самому верху */
-    left: 0;
-    width: 100%;          /* Растягиваем на всю ширину */
-    background: #E2D9C8;  /* Цвет фона прямоугольника */
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); /* Легкая тень снизу */
-    z-index: 1000;        /* Чтобы меню всегда было поверх картинок */
-    padding: 10px 0;      /* Отступы внутри прямоугольника */
+  position: fixed;
+  /* Фиксируем на экране */
+  top: 0;
+  /* Прижимаем к самому верху */
+  left: 0;
+  width: 100%;
+  /* Растягиваем на всю ширину */
+  background: #E2D9C8;
+  /* Цвет фона прямоугольника */
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  /* Легкая тень снизу */
+  z-index: 1000;
+  /* Чтобы меню всегда было поверх картинок */
+  padding: 10px 0;
+  /* Отступы внутри прямоугольника */
 }
 
 /* Центрируем список внутри шапки */
 .main-header .menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
 }
 
 /* Чтобы контент сайта не заезжал ПОД меню, добавим отступ всему телу сайта */
 body {
-    padding-top: 70px; /* Высота должна быть чуть больше высоты меню */
+  padding-top: 70px;
+  /* Высота должна быть чуть больше высоты меню */
+}
+
+@media screen and (width: 450px) {
+
+  .main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 390px;
+    background: #E2D9C8;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 10px 0;
+  }
+
+  .container {
+    width: 450px;
+        
+  }
+.container-mobil{
+  width: 450px;
+}
+
+  .menu {
+    width: 390px;
+  }
+
+  .menu-item{
+    width: 150px;
+  }
 }
