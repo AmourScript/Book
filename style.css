@@ -908,22 +908,27 @@ img {
 
 }
 
-.main-header {
-  position: fixed;
-  /* Фиксируем на экране */
-  top: 0;
-  /* Прижимаем к самому верху */
-  left: 0;
-  width: 100%;
-  /* Растягиваем на всю ширину */
-  background: #E2D9C8;
-  /* Цвет фона прямоугольника */
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-  /* Легкая тень снизу */
-  z-index: 1000;
-  /* Чтобы меню всегда было поверх картинок */
-  padding: 10px 0;
-  /* Отступы внутри прямоугольника */
+
+@media screen and (max-width: 1800px) {
+
+  .main-header {
+    position: fixed;
+    /* Фиксируем на экране */
+    top: 0;
+    /* Прижимаем к самому верху */
+    left: 0;
+    width: 100%;
+    /* Растягиваем на всю ширину */
+    background: #E2D9C8;
+    /* Цвет фона прямоугольника */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    /* Легкая тень снизу */
+    z-index: 1000;
+    /* Чтобы меню всегда было поверх картинок */
+    padding: 10px 0;
+    /* Отступы внутри прямоугольника */
+  }
+
 }
 
 /* Центрируем список внутри шапки */
@@ -942,35 +947,66 @@ body {
   /* Высота должна быть чуть больше высоты меню */
 }
 
-@media screen and (width: 450px) {
+@media screen and (max-width: 450px) {
 
   .main-header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 390px;
+    width: 450px !important;
     background: #E2D9C8;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 60px;
+    /* margin-left: 50px; */
   }
 
   .container {
     width: 450px;
-        
+
   }
-.container-mobil{
-  width: 450px;
-}
+
+  .container-mobil {
+    width: 450px;
+  }
 
   .menu {
-    width: 390px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    gap: 38px;
+    width: 293px;
+
   }
 
-  .menu-item{
-    width: 150px;
+  .main-header .menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+    margin-left: 20px;
   }
+
+  .menu-item {
+    width: 74px;
+  }
+  .book-card{
+      width: 330px;
+  }
+
 }
-.pay{
+
+.pay {
   color: #154a19;
 }

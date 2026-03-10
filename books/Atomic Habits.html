@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Атомні звички. Легкий і перевірений спосіб набути корисних звичок і позбутися звичок шкідливих</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .book-page {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .book-image-large {
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-info-large {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #888;
+            font-family: 'Lora', serif;
+        }
+
+        .description-block {
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: #100379;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="book-page">
+        <a href="../index.html" class="back-link">← Повернутись до каталогу</a>
+
+        <div style="display: flex; gap: 40px; width: 100%;">
+            <div class="product-slider">
+                <div class="thumbnails">
+                    <img src="../img/АтомніЗвички.webp" class="thumb active"
+                        onclick="changeImage(this, 'https://raw.githubusercontent.com/AmourScript/Book/refs/heads/main/img/%D0%90%D1%82%D0%BE%D0%BC%D0%BD%D1%96%D0%97%D0%B2%D0%B8%D1%87%D0%BA%D0%B8.webp')"
+                        alt="Товар 1">
+                    <img src="../img/АтомніЗвички2.webp" class="thumb"
+                        onclick="changeImage(this, 'https://raw.githubusercontent.com/AmourScript/Book/refs/heads/main/img/%D0%90%D1%82%D0%BE%D0%BC%D0%BD%D1%96%D0%97%D0%B2%D0%B8%D1%87%D0%BA%D0%B82.webp')"
+                        alt="Товар 2">
+                    <img src="../img/АтомніЗвички3.webp" class="thumb"
+                        onclick="changeImage(this, 'https://raw.githubusercontent.com/AmourScript/Book/refs/heads/main/img/%D0%90%D1%82%D0%BE%D0%BC%D0%BD%D1%96%D0%97%D0%B2%D0%B8%D1%87%D0%BA%D0%B83.webp')"
+                        alt="Товар 3">
+
+                </div>
+
+                <div class="main-view">
+                    <img id="main-img" src="../img/АтомніЗвички.webp" alt="Основне фото товару">
+                </div>
+            </div>
+
+            <div class="book-info-large">
+                <h1 class="title" style="text-align: left; margin: 0;"></h1>
+                <p class="book-price" style="font-size: 28px; margin: 20px 0;">525 грн</p>
+                <button class="button-odr" id="openModal" style="padding: 15px 40px; font-size: 18px;">Замовити
+                    КНИГУ</button>
+                <div id="myModal" class="backdrop is-hidden">
+                    <div class="modal">
+                        <button id="closeModal" class="btn button-odr" type="button"
+                            style="float: right; margin-bottom: 10px;">Закрити</button>
+
+                        <form action="https://formspree.io/f/xkovnlqp" method="POST">
+                            <input type="hidden" name="Книга" value="Зміїне лігво">
+
+                            <h2 style="font-family: 'Lora', serif;">Оформлення замовлення</h2>
+
+                            <label>Ім'я <br> <input type="text" name="name" required /></label><br>
+                            <label>Прізвище <br> <input type="text" name="surname" required /></label><br>
+                            <label for="genre">книга: <br> </label>
+
+                            <select id="genre" name="book" required>
+                                <option value="І зійде крига 1">І зійде крига 1</option>
+
+
+                            </select> <br>
+                            <label>Телефон <br> <input type="text" name="tel" placeholder="+380..."
+                                    required /></label><br>
+                            <label>Місто <br> <input type="text" name="city" required /></label><br>
+                            <label>Пошта (номер/поштомат) <br> <input type="text" name="post_office"
+                                    required /></label><br>
+
+                            <label>Доставка: <br>
+                                <input type="radio" name="delivery" value="NovaPost" checked> Нова пошта
+                                <input type="radio" name="delivery" value="UkrPost"> Укрпошта
+                            </label><br>
+
+                            <div class="divbutton-odr scale-up-center">
+                                <button class="button-odr" type="submit">ВІДПРАВИТИ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <script>
+                    // Логика открытия/закрытия
+                    const modal = document.getElementById("myModal");
+                    const btnOpen = document.getElementById("openModal");
+                    const btnClose = document.getElementById("closeModal");
+
+                    btnOpen.onclick = () => modal.classList.remove("is-hidden");
+                    btnClose.onclick = () => modal.classList.add("is-hidden");
+
+                    // Закрыть при клике на темный фон
+                    window.onclick = (event) => {
+                        if (event.target == modal) modal.classList.add("is-hidden");
+                    }
+                </script>
+
+
+                <div style="margin-top: 30px; color: #555;">
+                    <div style="margin-top: 30px; color: #555; line-height: 1.6;">
+                        <p><strong>Автор:</strong> Джеймс Клір</p>
+                        <p><strong>Видавництво:</strong> Stone Publishing</p>
+                        <p><strong>Перекладач:</strong> Аліна Акуленко</p>
+                        <p><strong>Рік видання:</strong> 2025</p>
+                        <p><strong>Мова:</strong> Українська</p>
+                        <p><strong>Кількість сторінок:</strong> 304</p>
+                        <p><strong>Обкладинка:</strong> Тверда</p>
+                        <p><strong>Вага:</strong> 0.331 </p>
+                        <p><strong>Формат:</strong> 135x205x23мм</p>
+                        <p><strong>Тип:</strong> Паперова книга</p>
+                        <p><strong>Серія</strong> Психологія</p>
+                    </div>
+                </div>
+                <div class="description-block" style="clear: both; padding-top: 40px;"></div>
+            </div>
+        </div>
+
+        <div class="description-block">
+            <h2 class="section-title">ПРО ЩО ЦЯ ІСТОРІЯ?</h2>
+            <p class="welcome" style="text-align: left; width: 100%;">
+                Бестселер «The New York Times»!
+                Незначні зміни, значні результати! Дізнайтеся секрет тривалих результатів!
+                Нашпигована заснованими на фактах стратегіями із самовдосконалення, книга «Атомні звички» навчить, як
+                набути манер і навиків, що працюватимуть на вас, а не проти вас.
+
+                У книзі Джеймс Клір ділиться надзвичайно цікавою і по-справжньому продуктивною методикою напрацювання
+                корисних звичок. В її основі лежить поняття чотириступеневої моделі звичок (подразник, прагнення,
+                відгук, винагорода), а також чотири породжені цією моделлю закони зміни поведінки. Викладений матеріал
+                підтверджується результатами наукових досліджень, проте книгу слід трактувати не як наукову розвідку, а
+                як посібник з експлуатації, що містить мудрі практичні поради та пояснення механізмів створення і
+                змінювання власних звичок. Єдиного правильного способу набуття корисних звичок, звісно, не існує, але
+                автор пропонує найкращий із відомих підхід, який спрацює незалежно від того, з чого саме ви починаєте і
+                що саме намагаєтеся змінити.
+
+            </p>
+        </div>
+    </div>
+    <script src="../modal.js"></script>
+</body>
+
+</html>
