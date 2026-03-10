@@ -1016,6 +1016,12 @@ body {
     list-style: none;
     margin-top: -55px;
   }
+  .video {
+    height: 200px;
+    margin: -3px auto;
+    width: 358px;
+    display: block;
+    margin-left: 7px;
 }
 
 .pay {
