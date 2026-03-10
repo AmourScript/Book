@@ -1001,10 +1001,21 @@ body {
   .menu-item {
     width: 74px;
   }
-  .book-card{
-      width: 330px;
+
+  .book-card {
+    width: 330px;
   }
 
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0px;
+    margin-left: -70px;
+    list-style: none;
+    margin-top: -55px;
+  }
 }
 
 .pay {
