@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>книги</title>
   <link rel="icon" href="./img/иконка.jpg" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -21,16 +23,14 @@
 
   <div class="center-book">
 
-
   </div>
 
   <section>
-
     <header class="main-header">
       <nav class="container container-mobil">
         <ul class="menu">
           <li class="menu-item scale-up-center"><a href="index.html" class="menu-link">ГОЛОВНА</a></li>
-          <li class="menu-item scale-up-center"><a href="manhva.html" class="menu-link">МАНГИ</a></li>
+          <li class="menu-item scale-up-center"><a href="kniha.html" class="menu-link">КНИГИ</a></li>
           <li class="menu-item scale-up-center"><a href="contact.html" class="menu-link">КОНТАКТИ</a></li>
         </ul>
       </nav>
@@ -40,11 +40,21 @@
 
   <main>
     <button class="chat-button"></button>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/2.jpg" class="d-block w-100" alt="..." width="200">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/9.jpg" class="d-block w-100" alt="..." width="200">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/images.jfif" class="d-block w-100" alt="..." width="200
+    ">
+        </div>
+      </div>
     </div>
-
-    </form>
-    </div>
-    <br><br>
+    <!-- <br><br> -->
     <div class="container">
 
       <ul class="book-list">
@@ -134,19 +144,7 @@
           <h3 class="pay">588 грн</h3>
         </li>
 
-        <li class="book-card">
-          <h3 class="book-name">Назва книги: "Атомні звички"</h3>
-          <img class="book-img" src="./img/АтомніЗвички.webp" alt="Атомні звички" width="200">
-          <a class="img-link" href="./books/Atomic Habits.html">докладніше</a>
-          <h3 class="pay">525 грн</h3>
-        </li>
-
-        <li class="book-card">
-          <h3 class="book-name">Назва книги: "Безрозсудна 2"</h3>
-          <img class="book-img" src="./img/Безроссудна.webp" alt="Безрозсудна 2" width="200">
-          <a class="img-link" href="./books">докладніше</a>
-          <h3 class="pay">525 грн</h3>
-        </li>
+       
 
       </ul>
     </div>
@@ -186,12 +184,24 @@
         </p>
       </div>
     </footer>
+
     <script src="modal.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
 
 </body>
 

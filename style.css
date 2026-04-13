@@ -48,7 +48,7 @@
   margin: 0 auto;
   width: 900px;
   text-align: center;
-  width: 1000px;
+  width: 1200px;
 
 }
 
@@ -57,6 +57,7 @@
   background-color: rgb(187, 171, 151);
   padding: 10px;
   border-radius: 10px;
+  color: #551a8b !important;
 }
 
 .menu-link:hover {
@@ -1028,3 +1029,9 @@ body {
 .pay {
   color: #154a19;
 } 
+
+.btn-centered {
+  width: 150px;
+  /* outline: 2px salmon solid; */
+  margin: 0 auto;
+}

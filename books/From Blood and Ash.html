@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Кров і попіл. Книга 1. Із крові й попелу (Подарункове видання)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .book-page {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .book-image-large {
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-info-large {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #888;
+            font-family: 'Lora', serif;
+        }
+
+        .description-block {
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: #100379;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="book-page">
+        <a href="../index.html" class="back-link">← Повернутись до каталогу</a>
+
+        <div style="display: flex; gap: 40px; width: 100%;">
+            <div class="product-slider">
+                <div class="thumbnails">
+                    <img src="../img/Haunting Adeline3.webp" class="thumb active"
+                        onclick="changeImage(this, 'https://raw.githubusercontent.com/AmourScript/Book/refs/heads/main/img/Haunting%20Adeline3.webp')"
+                        alt="Товар 1">
+                    <img src="../img/Haunting Adeline.webp" class="thumb"
+                        onclick="changeImage(this, 'https://raw.githubusercontent.com/AmourScript/Book/refs/heads/main/img/Haunting%20Adeline.webp')"
+                        alt="Товар 2">
+                    <img src="../img/Haunting Adeline2.webp" class="thumb"
+                        onclick="changeImage(this, 'https://raw.githubusercontent.com/AmourScript/Book/refs/heads/main/img/Haunting%20Adeline2.webp')"
+                        alt="Товар 3">
+                </div>
+
+                <div class="main-view">
+                    <img id="main-img" src="../img/Із_крові_і_попіл_1.webp" alt="Основне фото товару">
+                </div>
+            </div>
+
+            <div class="book-info-large">
+                <h1 class="title" style="text-align: left; margin: 0;"></h1>
+                <p class="book-price" style="font-size: 28px; margin: 20px 0;">від 594 грн</p>
+                <button class="button-odr" id="openModal" style="padding: 15px 40px; font-size: 18px;">Замовити
+                    КНИГУ</button>
+                <div id="myModal" class="backdrop is-hidden">
+                    <div class="modal">
+                        <button id="closeModal" class="btn button-odr" type="button"
+                            style="float: right; margin-bottom: 10px;">Закрити</button>
+
+                        <form action="https://formspree.io/f/xkovnlqp" method="POST">
+                            <input type="hidden" name="Книга" value="Зміїне лігво">
+
+                            <h2 style="font-family: 'Lora', serif;">Оформлення замовлення</h2>
+
+                            <label>Ім'я <br> <input type="text" name="name" required /></label><br>
+                            <label>Прізвище <br> <input type="text" name="surname" required /></label><br>
+                            <label for="genre">книга: <br> </label>
+
+                            <select id="genre" name="book" required>
+                                <option value="Із крові і попілу. Книга 1">Полювання на Аделіну. Книга 2 (Гра в кота і мишу)</option>
+
+
+                            </select> <br>
+                            <label>Телефон <br> <input type="text" name="tel" placeholder="+380..."
+                                    required /></label><br>
+                            <label>Місто <br> <input type="text" name="city" required /></label><br>
+                            <label>Пошта (номер/поштомат) <br> <input type="text" name="post_office"
+                                    required /></label><br>
+
+                            <label>Доставка: <br>
+                                <input type="radio" name="delivery" value="NovaPost" checked> Нова пошта
+                                <input type="radio" name="delivery" value="UkrPost"> Укрпошта
+                            </label><br>
+
+                            <div class="divbutton-odr scale-up-center">
+                                <button class="button-odr" type="submit">ВІДПРАВИТИ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <script>
+                    // Логика открытия/закрытия
+                    const modal = document.getElementById("myModal");
+                    const btnOpen = document.getElementById("openModal");
+                    const btnClose = document.getElementById("closeModal");
+
+                    btnOpen.onclick = () => modal.classList.remove("is-hidden");
+                    btnClose.onclick = () => modal.classList.add("is-hidden");
+
+                    // Закрыть при клике на темный фон
+                    window.onclick = (event) => {
+                        if (event.target == modal) modal.classList.add("is-hidden");
+                    }
+                </script>
+
+
+                <div style="margin-top: 30px; color: #555;">
+                    <div style="margin-top: 30px; color: #555; line-height: 1.6;">
+                        <p><strong>Автор:</strong> Х.Д. Карлтон</p>
+                        <p><strong>Видавництво:</strong> Book Chef</p>
+                        <p><strong>Перекладач:</strong> Марія Великанова</p>
+                        <p><strong>Рік видання:</strong> 2024</p>
+                        <p><strong>Мова:</strong> Українська</p>
+                        <p><strong>Кількість сторінок:</strong> 720</p>
+                        <p><strong>Обкладинка:</strong> Тверда</p>
+                        <p><strong>Вага:</strong> 0.611кг</p>
+                        <p><strong>Формат:</strong> 135x205x43мм</p>
+                        <p><strong>Тип:</strong> Паперова книга</p>
+                    </div>
+                </div>
+                <div class="description-block" style="clear: both; padding-top: 40px;"></div>
+            </div>
+        </div>
+
+        <div class="description-block">
+            <h2 class="section-title">ПРО ЩО ЦЯ ІСТОРІЯ?</h2>
+            <p class="welcome" style="text-align: left; width: 100%;">
+                Діамант. Смерть крокує обіч мене, та Похмурий Жнець мені більше не рівня. Я потрапила в пастку до
+                чудовиськ у подобі чоловіків і до тих, хто видає себе за когось іншого. Вони не зможуть тримати мене в
+                себе завжди. Я не впізнаю людину, котрою стала, та б’юся за те, щоб знайти шлях назад, до звіра, котрий
+                полював на мене вночі. Мене називають діамантом, та спромоглися створити лише янгола смерті.
+
+                Шукач. Я народився хижаком, безжальність викарбувана в мене на кістках. Коли те, що належить мені,
+                викрали посеред ночі, немовби діамант сховали у фортеці, Я з’ясував, що не можу більше стримувати звіра.
+                Кров плямуватиме землю, коли я розриватиму цей світ на шматки, шукаючи її. А потім я поверну її туди, де
+                їй місце. Ніхто не уникне мого гніву, а поготів — ті, хто зрадив мене.
+
+            </p>
+        </div>
+    </div>
+    <script src="../modal.js"></script>
+</body>
+
+</html>
