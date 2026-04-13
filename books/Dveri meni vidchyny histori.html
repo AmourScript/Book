@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Двері мені відчини</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .book-page {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            /* Змінено для кращого контролю */
+            gap: 20px;
+        }
+
+        .book-content-wrapper {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .product-slider {
+            display: flex;
+            gap: 15px;
+            max-width: 450px;
+        }
+
+        .thumbnails img {
+            width: 60px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .thumbnails img.active {
+            border-color: #100379;
+        }
+
+        .main-view img {
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-info-large {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #888;
+            font-family: 'Lora', serif;
+        }
+
+        .description-block {
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: #100379;
+        }
+
+        .read {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="book-page">
+        <a href="../histori.html" class="back-link">← Повернутись до каталогу</a>
+
+        <div class="book-content-wrapper">
+            <div class="product-slider">
+                <div class="thumbnails">
+                    <img src="../img/двери мне открой.jpg" class="thumb active"
+                        onclick="changeImage('../img/двери мне открой.jpg')" alt="Товар 1">
+                </div>
+
+                <div class="main-view">
+                    <img id="main-img" src="../img/двери мне открой.jpg" alt="Основне фото товару">
+                </div>
+            </div>
+
+            <div class="book-info-large">
+                <p class="read">#психологічного_трилер #міська_легенда</p>
+                <p><strong>Ця історія сподобається тим, хто любить:</strong></p>
+                <ul>
+                    <li>Атмосферу «безнадії» пострадянських двориків.</li>
+                    <li>Містику, де зло діє за власними незрозумілими правилами.</li>
+                    <li>Оповідання про невидиму загрозу.</li>
+                </ul>
+                <div class="text-center my-4">
+    <a href="../read/Dveri_meni_vidchyny_histori.html" class="button-odr" style="padding: 15px 40px; font-size: 18px; text-decoration: none; display: inline-block;">
+        Читати тут
+    </a>
+</div>
+            </div> 
+        </div>
+
+        <div class="description-block">
+            <h2 class="section-title">ПРО ЩО ЦЯ ІСТОРІЯ?</h2>
+            <div class="welcome" style="text-align: justify; line-height: 1.6;">
+                <p>Звичайний спальний район, де вечорами чути лише відлуння поодиноких кроків. Але що робити, коли тишу
+                    розриває грубий чоловічий голос, що вимагає впустити його всередину?
+
+                    Герой цієї історії став свідком того, як природа першою відчула наближення чогось невідворотного:
+                    спочатку зникли птахи, потім збожеволіли домашні улюбленці, а з під’їздів почали тікати щури. Це не
+                    просто п’яний дебошир і не звичайний грабіжник. Це щось, що обирає собі жертву і не зупиняється,
+                    поки не почує заповітне клацання дверного замка.
+
+                    Головне правило: якщо ти почув цей крик під своїм вікном — не відповідай, не дивись у вічко і,
+                    головне... ніколи не відчиняй ці двері.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('main-img').src = src;
+        }
+    </script>
+    <script src="../modal.js"></script>
+</body>
+
+</html>

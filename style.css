@@ -1035,3 +1035,23 @@ body {
   /* outline: 2px salmon solid; */
   margin: 0 auto;
 }
+.custom-link {
+    color: #333; /* Делаем темно-серым, почти черным */
+    text-decoration: none;
+    font-size: 1.2rem; /* Увеличиваем размер */
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.custom-link:hover {
+    color: #ff8c00; /* Оранжевый появится только при наведении */
+    text-decoration: underline !important;
+}
+.read{
+  color: #000000;
+  font-size: 1.2rem; 
+}
+.book-read{
+   font-size: 0.7rem; 
+   color: #033303;
+}
