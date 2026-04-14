@@ -353,7 +353,7 @@
 }
 
 .book-name {
-  font-family: "Bad Script", cursive;
+  font-family: "Times", cursive;
   text-align: center;
 }
 
@@ -1054,4 +1054,12 @@ body {
 .book-read{
    font-size: 0.7rem; 
    color: #033303;
+}
+/* Пример для заголовков в карточках */
+.card-title, h2 {
+    font-family: 'Montserrat', sans-serif !important; /* Современный и жирный */
+    font-weight: 800; /* Чтобы был мощным */
+    text-transform: uppercase; /* Можно сделать все буквы заглавными для стиля */
+    letter-spacing: 1px; /* Немного раздвинем буквы */
+    color: #1a1a1a;
 }

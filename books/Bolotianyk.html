@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Болотяник</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .book-page {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            /* Змінено для кращого контролю */
+            gap: 20px;
+        }
+
+        .book-content-wrapper {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .product-slider {
+            display: flex;
+            gap: 15px;
+            max-width: 450px;
+        }
+
+        .thumbnails img {
+            width: 60px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .thumbnails img.active {
+            border-color: #100379;
+        }
+
+        .main-view img {
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-info-large {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #888;
+            font-family: 'Lora', serif;
+        }
+
+        .description-block {
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: #100379;
+        }
+
+        .read {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="book-page">
+        <a href="../histori.html" class="back-link">← Повернутись до каталогу</a>
+
+        <div class="book-content-wrapper">
+            <div class="product-slider">
+                <div class="thumbnails">
+                    <img src="../img/болотнік.jpg" class="thumb active"
+                        onclick="changeImage(this, 'https://https://https://raw.githubusercontent.com/AmourScript/Book/refs/heads/main/img/%D0%A1%D0%BD%D1%96%D0%B3%D0%BE%D0%B2%D0%B8%D0%BA.jpg')"
+                        alt="Товар 1">
+                </div>
+
+                <div class="main-view">
+                    <img id="main-img" src="../img/болотнік.jpg" alt="Основне фото товару">
+                </div>
+            </div>
+
+            <div class="book-info-large">
+                <p class="read">#фольклор, #містика, #болото, #духи_природи, #кріпіпаста, #виживання</p>
+                <p><strong>Ця історія сподобається тим, хто любить:</strong></p>
+                <ul>
+                    <li>Атмосферу «дикого» лісу, де звичайна прогулянка за ягодами перетворюється на виживання.</li>
+                    <li>Фольклорний жах, коли давні істоти з казок виявляються реальними й зовсім не добрими.</li>
+                    <li>Ефект «обману почуттів», коли ти не можеш довіряти власним очам, а провідник може бути пасткою.
+                    </li>
+                    <li>Відчуття липкого страху перед невідомим, що ховається в тумані та болотяній твані.</li>
+                    <li>Сюжети про «порушення правил»: коли ти знаєш ліс як свої п'ять пальців, але він раптом починає
+                        грати проти тебе</li>
+                    <li>Відчуття повної самотності, коли ти один на один із чимось нелюдським посеред великого міста.
+                    <li>Містику «старої школи», де немає скрімерів, але є відчуття, що за тобою постійно хтось
+                        спостерігає з темряви.</li>
+                    <li>Стиль «багаття в таборі», коли історія звучить так, ніби її розповідає реальний походник, який
+                        дивом повернувся живим.</li>
+                </ul>
+                <div class="text-center my-4">
+                    <a href="../read/Bolotianyk_.html" class="button-odr"
+                        style="padding: 15px 40px; font-size: 18px; text-decoration: none; display: inline-block;">
+                        Читати тут
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="description-block">
+            <h2 class="section-title">ПРО ЩО ЦЯ ІСТОРІЯ?</h2>
+            <div class="welcome" style="text-align: justify; line-height: 1.6;">
+                <p>Липень 2007-го. Звичайний виїзд із друзями на Івана Купала обертається нічним кошмаром у заболочених
+                    нетрях. Коли ліхтар залишається в рюкзаку, а темрява стає настільки густою, що її можна торкнутися
+                    рукою, ліс починає грати за своїми правилами. Герой зустрічає дивного провідника в рясі ченця, який
+                    обіцяє вивести до табору, але кожен крок лише глибше затягує в топь. Це історія про те, як легко
+                    стати здобиччю прадавнього духа, який майстерно розставляє цифрові та ментальні пастки, чекаючи на
+                    твій єдиний хибний крок. Кому вірити, якщо навіть земля під ногами — це лише ілюзія?</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('main-img').src = src;
+        }
+    </script>
+    <script src="../modal.js"></script>
+</body>
+
+</html>
