@@ -725,6 +725,11 @@ img {
   border: 1px solid #121212;
 }
 
+.carousel{
+  width: 1000px;
+  margin: 0 auto;
+}
+
 .link-telegram:hover{
   /* background-color: #d4d0ca; */
    color: #000;
